@@ -98,29 +98,29 @@ const { Server } = require('socket.io');
 const server = http.createServer(app);
 const io = new Server(server);
 
-app.use(cors(
-    {
-        origin : ["https://deploy-mern-1whq.vercel.app"],
-        method : ["POST","GET"],
-        credentials : true 
-    }    
-));
+// app.use(cors(
+//     {
+//         origin : ["https://deploy-mern-1whq.vercel.app"],
+//         method : ["POST","GET"],
+//         credentials : true 
+//     }    
+// ));
 
-// io.on('connection', (socket) => {
-//     console.log('a user connected');
+io.on('connection', (socket) => {
+    console.log('a user connected');
 
-//     socket.on('disconnect', () => {
-//         console.log('user disconnected');
-//     });
+    socket.on('disconnect', () => {
+        console.log('user disconnected');
+    });
 
-//     socket.on('chat message', (msg) => {
-//         io.emit('chat message', msg);
-//     });
+    socket.on('chat message', (msg) => {
+        io.emit('chat message', msg);
+    });
 
-//     socket.on('signal', (data) => {
-//         socket.broadcast.emit('signal', data);
-//     });
-// });
+    socket.on('signal', (data) => {
+        socket.broadcast.emit('signal', data);
+    });
+});
 
 // server.listen(3000, () => {
 //     console.log('listening on *:3000');
