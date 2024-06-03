@@ -106,21 +106,21 @@ app.use(cors(
     }    
 ));
 
-io.on('connection', (socket) => {
-    console.log('a user connected');
+// io.on('connection', (socket) => {
+//     console.log('a user connected');
 
-    socket.on('disconnect', () => {
-        console.log('user disconnected');
-    });
+//     socket.on('disconnect', () => {
+//         console.log('user disconnected');
+//     });
 
-    socket.on('chat message', (msg) => {
-        io.emit('chat message', msg);
-    });
+//     socket.on('chat message', (msg) => {
+//         io.emit('chat message', msg);
+//     });
 
-    socket.on('signal', (data) => {
-        socket.broadcast.emit('signal', data);
-    });
-});
+//     socket.on('signal', (data) => {
+//         socket.broadcast.emit('signal', data);
+//     });
+// });
 
 // server.listen(3000, () => {
 //     console.log('listening on *:3000');
