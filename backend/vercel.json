@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "client/package.json", // assuming your client's package.json is in a 'client' folder
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    { 
+      "src": "/(.*)",
+      "dest": "/" 
+    }
+  ]
+}
