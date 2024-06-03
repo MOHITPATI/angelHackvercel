@@ -1,0 +1,155 @@
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #1c05ae;
+}
+
+.item-details {
+    flex: 2;
+}
+
+.item-details:hover {
+    flex: 2;
+    color: red !important;
+    font-size: small !important;
+}
+
+.item-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-button {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.action-button img {
+    width: 100%;
+    height: 100%;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #1c05ae;
+    width: 80% !important;
+    /* Increase the width to 80% */
+    margin: 10px auto;
+    /* Center the component horizontally */
+    color: white;
+    /* Ensure text color is readable on the dark background */
+}
+
+.item-details {
+    flex: 2;
+    color: white;
+    /* Set text color */
+}
+
+.add {
+    color: black !important;
+    padding-right: 5px !important;
+}
+
+.item-actions {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    flex-direction: column !important;
+}
+
+.action-button {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.action-button img {
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    display: flex !important;
+    color: white !important;
+    font-size: 1.5rem !important;
+    margin-top: 10px !important;
+}
+
+
+/* ListItem.css */
+
+.rating-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rating-section select {
+    padding: 5px;
+}
+
+.rating-section button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rating-section button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+    /* Tablet media query */
+    .list-item {
+        width: 100%;
+        /* Make the list item full width on tablets */
+        margin: 10px auto;
+        /* Center the component horizontally */
+    }
+    .item-details {
+        flex: 1;
+        /* Adjust flex value to prevent excessive stretching */
+    }
+    .item-actions {
+        flex-direction: column;
+        /* Stack actions vertically on tablets */
+        gap: 10px;
+        /* Maintain spacing between actions */
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile media query */
+    .list-item {
+        padding: 5px;
+        /* Reduce padding for better use of space */
+    }
+    .item-actions {
+        padding: 10px;
+        /* Reduce padding for better use of space */
+    }
+    .action-button {
+        width: 25px;
+        /* Reduce button size for smaller screens */
+        height: 25px;
+    }
+}

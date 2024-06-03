@@ -1,0 +1,83 @@
+.user-info {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(250, 248, 248);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-details {
+    color: black;
+    flex: 1;
+    padding-right: 20px;
+}
+
+.user-details p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.user-photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info p {
+    color: black !important;
+    font-size: 1rem !important;
+}
+
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+    .user-info {
+        flex-direction: column;
+        /* Stacks items vertically */
+        align-items: flex-start;
+        /* Align items to start */
+    }
+    .user-details {
+        padding-right: 0;
+        /* Remove right padding */
+        padding-bottom: 20px;
+        /* Add bottom padding */
+    }
+    .user-photo {
+        margin-top: 0;
+        /* Reset margin-top */
+    }
+    .user-photo img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-info {
+        padding: 10px;
+        /* Reduce padding */
+    }
+    .user-details p {
+        font-size: 0.9rem;
+        /* Reduce font size */
+    }
+    .user-photo img {
+        width: 120px;
+        height: 120px;
+    }
+}

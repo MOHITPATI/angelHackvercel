@@ -1,0 +1,189 @@
+.body-container {
+    background-image: url('../../img/home_background.png');
+    /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* You can adjust this height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(173, 171, 171, 0.5);
+    /* Black overlay with 50% opacity */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    color: rgb(214, 5, 5);
+    font-size: 3rem;
+    /* Adjust as needed */
+    margin: 0;
+}
+
+p {
+    color: white;
+    font-size: 1.5rem;
+    /* Adjust as needed */
+    margin-top: 10px;
+}
+
+p:hover {
+    color: black;
+    text-decoration: solid;
+    font-size: 1.6rem;
+}
+
+
+/* update */
+
+.body-container {
+    background-image: url('../../img/home_background.png');
+    /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    /* Ensure the body spans the full height of the screen */
+    padding-top: 80px;
+    /* Adjust according to your navbar height */
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black overlay with 50% opacity */
+    width: 100%;
+    height: 50vh;
+    /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+    /* Space between overlay and content sections */
+}
+
+h1 {
+    color: white;
+    font-size: 3rem;
+    /* Adjust as needed */
+    margin: 0;
+}
+
+p {
+    color: white;
+    font-size: 1.5rem;
+    /* Adjust as needed */
+    margin-top: 10px;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* Space between content items */
+    padding: 0 20px;
+    /* Horizontal padding */
+}
+
+.content-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Space between image and text */
+}
+
+.content-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.content-image {
+    width: 40%;
+    /* Adjust as needed */
+    height: auto;
+    border-radius: 10px;
+    /* Optional: Add rounded corners to images */
+}
+
+.content-text {
+    font-size: 1.2rem;
+    /* Adjust as needed */
+    color: #333 !important;
+    /* Darker text color */
+    flex: 1;
+    /* Take the remaining space */
+    padding: 20px;
+    /* Space around text */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Semi-transparent background for text */
+    border-radius: 10px;
+    /* Optional: Add rounded corners to text container */
+}
+
+.body {
+    /* existing styles */
+    padding-bottom: 60px;
+    /* Adjust the height as needed */
+}
+
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+    /* Tablet media query */
+    .body-container {
+        padding-top: 50px;
+        /* Adjust padding for smaller screens */
+    }
+    .overlay {
+        height: 70vh;
+        /* Adjust overlay height for tablets */
+    }
+    h1 {
+        font-size: 2.5rem;
+        /* Adjust font size for better readability */
+    }
+    p {
+        font-size: 1.2rem;
+        /* Adjust font size for better readability */
+    }
+    .content-section {
+        gap: 20px;
+        /* Reduce spacing between content items */
+    }
+    .content-image {
+        width: 100%;
+        /* Make images full width on tablets */
+    }
+    .content-text {
+        padding: 15px;
+        /* Reduce padding for better use of space */
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile media query (optional) */
+    .content-item {
+        flex-direction: column;
+        /* Stack image and text on mobile */
+        align-items: flex-start;
+        /* Align content at the top */
+    }
+    .content-text {
+        margin-top: 10px;
+        /* Add spacing between image and text */
+    }
+    .content-image {
+        margin-bottom: 10px;
+        /* Add spacing between image and text */
+    }
+}

@@ -1,0 +1,120 @@
+/* .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: grey;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.navbar {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+} */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: grey;
+    padding: 10px 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Ensure it stays above other content */
+}
+
+.logo {
+    height: 40px;
+}
+
+.navbar {
+    display: flex;
+    /* gap: 10px; */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 25px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+    /* Tablet media query */
+    .header {
+        padding: 5px;
+        /* Reduce padding on smaller screens */
+    }
+    .logo {
+        height: 30px;
+        /* Adjust logo size for better fit */
+    }
+    .navbar {
+        flex-direction: column;
+        /* Stack navigation links vertically */
+        gap: 10px;
+        /* Add spacing between links */
+        position: absolute;
+        /* Make navbar appear over main content on toggle */
+        top: 100%;
+        /* Position navbar below the header initially */
+        left: 0;
+        /* Align navbar to the left side */
+        width: 100%;
+        /* Make navbar full width */
+        background-color: grey;
+        /* Apply background color */
+        padding: 10px;
+        /* Add padding for content */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        /* Add subtle shadow */
+        display: none;
+        /* Hide navbar by default */
+    }
+    .nav-link {
+        padding: 15px;
+        /* Reduce padding for better use of space */
+        text-align: center;
+        /* Center text for vertical alignment */
+    }
+    /* Show navbar on hamburger menu click */
+    .header.active .navbar {
+        display: flex;
+        /* Show navbar on toggle */
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile media query (optional, adjust styles as needed) */
+    .nav-link {
+        font-size: 14px;
+        /* Reduce font size for better readability */
+    }
+}
