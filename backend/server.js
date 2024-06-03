@@ -98,6 +98,14 @@ const { Server } = require('socket.io');
 const server = http.createServer(app);
 const io = new Server(server);
 
+// app.use(cors(
+//     {
+//         origin : ;
+//         method : ["POST","GET"],
+//         credentials : true 
+//     }    
+// ));
+
 io.on('connection', (socket) => {
     console.log('a user connected');
 
